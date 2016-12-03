@@ -26,4 +26,5 @@ def printTable(tableList):
 			width = lengthList[i] + 1
 			print(tableList[i][j].rjust(width), end = '')
 		print()
+		
 printTable(tableData)
