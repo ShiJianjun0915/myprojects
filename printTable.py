@@ -22,9 +22,13 @@ def printTable(tableList):
 
 	for j in range(len(tableList[0])):
 		width = 0
+		width = lengthList[0]
 		for i in range(len(tableList)):
-			width = lengthList[i] + 1
 			print(tableList[i][j].rjust(width), end = '')
+			try:
+				width = lengthList[i+1] + 1
+			except:
+				None 
 		print()
 		
 printTable(tableData)
