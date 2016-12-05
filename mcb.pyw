@@ -11,7 +11,7 @@ mcbShelf = shelve.open('mcb')
 
 if len(sys.argv) == 3:
 	# Save clipboard content
-	if sys.argv[1].lower() == 'save' sys.argv[2] in mcbShelf:
+	if sys.argv[1].lower() == 'save' and sys.argv[2] in mcbShelf:
 		mcbShelf[sys.argv[2]] = pyperclip.paste()
 	#Delete the keyword
 	elif sys.argv[1].lower == 'delete' and sys.argv[2] in mcbShelf:
