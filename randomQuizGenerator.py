@@ -42,7 +42,9 @@ for quizNum in range(35):
 	quizFile.write((' '* 20) + 'States Capitals Quiz (Form %s)' % 
 		( quizNum + 1))
 	quizFile.write('\n\n')
-
+	# Write a number to the answer file.
+	answerKeyFile.write(('  '*20) + 'Answers Form %s\n\n' % 
+		(quizNum +1) )
 	# Shuffle the order of the states.
 	states = list(capitals.keys())
 	random.shuffle(states)
@@ -57,7 +59,7 @@ for quizNum in range(35):
 		wrongAnswers = random.sample(wrongAnswers, 3)
 		answerOptions = wrongAnswers + [corrrectAnswer]
 		random.shuffle(answerOptions)
-		# TODO: Write the question and answer opitions to the quiz file.
+		# Write the question and answer opitions to the quiz file.
 		quizFile.write('%s. What is the capital of %s?\n' % 
 			( questionNum + 1, states[questionNum]))
 		for i in range(4):
